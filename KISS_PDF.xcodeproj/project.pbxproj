@@ -14,8 +14,8 @@
 		02FCBCF4255DC65200B41849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FCBCF2255DC65200B41849 /* Main.storyboard */; };
 		02FCBCF6255DC65400B41849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FCBCF5255DC65400B41849 /* Assets.xcassets */; };
 		02FCBCF9255DC65400B41849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FCBCF7255DC65400B41849 /* LaunchScreen.storyboard */; };
-		02FCBD04255DC65500B41849 /* KISS_PDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCBD03255DC65500B41849 /* KISS_PDFTests.swift */; };
-		02FCBD0F255DC65500B41849 /* KISS_PDFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCBD0E255DC65500B41849 /* KISS_PDFUITests.swift */; };
+		02FCBD04255DC65500B41849 /* KISSPDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCBD03255DC65500B41849 /* KISSPDFTests.swift */; };
+		02FCBD0F255DC65500B41849 /* KISSPDFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FCBD0E255DC65500B41849 /* KISSPDFUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		02FCBCF8255DC65400B41849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02FCBCFA255DC65400B41849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02FCBCFF255DC65500B41849 /* KISS_PDFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISS_PDFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02FCBD03255DC65500B41849 /* KISS_PDFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISS_PDFTests.swift; sourceTree = "<group>"; };
+		02FCBD03255DC65500B41849 /* KISSPDFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISSPDFTests.swift; sourceTree = "<group>"; };
 		02FCBD05255DC65500B41849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02FCBD0A255DC65500B41849 /* KISS_PDFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISS_PDFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02FCBD0E255DC65500B41849 /* KISS_PDFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISS_PDFUITests.swift; sourceTree = "<group>"; };
+		02FCBD0E255DC65500B41849 /* KISSPDFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISSPDFUITests.swift; sourceTree = "<group>"; };
 		02FCBD10255DC65500B41849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 		02FCBD02255DC65500B41849 /* KISS_PDFTests */ = {
 			isa = PBXGroup;
 			children = (
-				02FCBD03255DC65500B41849 /* KISS_PDFTests.swift */,
+				02FCBD03255DC65500B41849 /* KISSPDFTests.swift */,
 				02FCBD05255DC65500B41849 /* Info.plist */,
 			);
 			path = KISS_PDFTests;
@@ -125,7 +125,7 @@
 		02FCBD0D255DC65500B41849 /* KISS_PDFUITests */ = {
 			isa = PBXGroup;
 			children = (
-				02FCBD0E255DC65500B41849 /* KISS_PDFUITests.swift */,
+				02FCBD0E255DC65500B41849 /* KISSPDFUITests.swift */,
 				02FCBD10255DC65500B41849 /* Info.plist */,
 			);
 			path = KISS_PDFUITests;
@@ -141,6 +141,7 @@
 				02FCBCE3255DC65100B41849 /* Sources */,
 				02FCBCE4255DC65100B41849 /* Frameworks */,
 				02FCBCE5255DC65100B41849 /* Resources */,
+				02B10DCE2566EAAF00A8C920 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -256,6 +257,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02B10DCE2566EAAF00A8C920 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02FCBCE3255DC65100B41849 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02FCBD04255DC65500B41849 /* KISS_PDFTests.swift in Sources */,
+				02FCBD04255DC65500B41849 /* KISSPDFTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02FCBD0F255DC65500B41849 /* KISS_PDFUITests.swift in Sources */,
+				02FCBD0F255DC65500B41849 /* KISSPDFUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thackbarth.KISS-PDF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -469,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thackbarth.KISS-PDF";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
