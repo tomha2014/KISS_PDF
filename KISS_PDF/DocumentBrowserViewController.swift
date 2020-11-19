@@ -34,15 +34,16 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
 
         let document = Document(fileURL: filename)
 
-        document.save(to: filename, for: .forCreating) { success in
-            document.close { success in
+        document.save(to: filename, for: .forCreating) { _ in
+            document.close { _ in
                 importHandler(filename, .move)
             }
         }
 
         //        let newDocumentURL: URL? = nil
         //
-        //        // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
+        //         Set the URL for the new document here. Optionally,
+        //          you can present a template chooser before calling the importHandler.
         //        // Make sure the importHandler is always called, even if the user cancels the creation request.
         //        if newDocumentURL != nil {
         //            importHandler(newDocumentURL, .move)
